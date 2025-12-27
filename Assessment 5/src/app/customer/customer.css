@@ -1,0 +1,111 @@
+/* Base */
+:host {
+  display: block;
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #1f3c88 0%, transparent 40%),
+    radial-gradient(900px 500px at 110% 10%, #6a8cff 0%, transparent 35%),
+    #0b1020;
+  padding: 70px 20px;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  color: #e6ebff;
+}
+
+/* Container */
+.table-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto;
+  padding-bottom: 30px;
+}
+
+/* Glass Table Card */
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.12),
+      rgba(255, 255, 255, 0.05)
+    );
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 18px;
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+}
+
+/* Table Header */
+.table thead {
+  background: rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.table th {
+  font-weight: 700;
+  font-size: 14px;
+  color: #000d47;
+  padding: 14px 16px;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Table Body */
+.table tbody tr {
+  background: rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: table-row;
+}
+
+.table tbody tr:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+}
+
+.table td, .table th {
+  padding: 12px 16px;
+  vertical-align: middle;
+  color: #000a32; /* main text */
+  font-weight: 500;
+}
+
+/* Address & Company Styling */
+.table td small {
+  color: #9fb4ff;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* Striped Rows */
+.table.table-striped tbody tr:nth-of-type(odd) {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Scrollbar Styling */
+.table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .table th, .table td {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .table thead {
+    font-size: 13px;
+  }
+}
