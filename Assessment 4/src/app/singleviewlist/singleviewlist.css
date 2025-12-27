@@ -1,0 +1,96 @@
+/* Page background */
+body {
+  background: #f8fafc;
+}
+
+/* Center the row */
+.row {
+  padding: 40px 20px;
+  justify-content: center;
+}
+
+/* Single product column */
+.col-md-2 {
+  display: flex;
+  justify-content: center;
+}
+
+/* Card styling */
+.card {
+  width: 100%;
+  max-width: 340px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff, #f1f5f9);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.25);
+}
+
+/* Product image */
+.card-img-top {
+  height: 260px;
+  object-fit: contain;
+  padding: 18px;
+  background: radial-gradient(circle at top, #ffffff, #e5e7eb);
+}
+
+/* Card body */
+.card-body {
+  text-align: center;
+  padding: 22px;
+}
+
+/* Product title */
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.card-text:nth-of-type(1) {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+/* Price */
+.card-text:nth-of-type(2) {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #16a34a;
+  margin-bottom: 12px;
+}
+
+/* Category pill */
+.card-text:nth-of-type(3) {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #1d4ed8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    max-width: 90%;
+  }
+
+  .card-img-top {
+    height: 220px;
+  }
+}
