@@ -1,0 +1,95 @@
+/* About Page Custom Styles */
+
+/* Base Host Reset */
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #ffffff;
+  /* Explicit white background */
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  color: #212529;
+}
+
+/* Hero Section */
+.about-hero {
+  padding: 100px 20px 60px;
+  position: relative;
+  overflow: hidden;
+  /* Prevent spillover */
+}
+
+/* Decorative background blob for Hero */
+.hero-decoration {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(13, 110, 253, 0.05) 0%, rgba(255, 255, 255, 0) 60%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Utility to ensure text pops */
+.text-secondary {
+  color: #6c757d !important;
+}
+
+/* Visual Circle Decorations */
+.visual-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.circle-1 {
+  width: 150px;
+  height: 150px;
+  background: #cfe2ff;
+  /* Light blue */
+  top: -20px;
+  right: -20px;
+}
+
+.circle-2 {
+  width: 80px;
+  height: 80px;
+  background: #e0cffc;
+  /* Light purple */
+  bottom: 10px;
+  left: -10px;
+}
+
+/* Cards Hover Effect */
+.shadow-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shadow-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Icon Box */
+.icon-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #e7f1ff;
+  /* Very light blue */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .display-3 {
+    font-size: 2.5rem;
+  }
+
+  .about-hero {
+    padding-top: 60px;
+  }
+}

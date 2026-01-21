@@ -1,0 +1,46 @@
+<div class="table-container">
+  <div *ngIf="isLoading" class="text-center p-5 text-dark">
+    <h3>Loading...</h3>
+  </div>
+
+  <div *ngIf="errorMessage" class="alert alert-danger m-3">
+    {{ errorMessage }}
+  </div>
+
+  <table *ngIf="!isLoading && !errorMessage" class="table table-striped table-hover align-middle">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+        <th>Tags</th>
+        <th>Reactions</th>
+        <th>Views</th>
+        <th>User ID</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let post of posts">
+        <th>{{ post.id }}</th>
+        <td><strong>{{ post.title }}</strong></td>
+        <td>
+          <small>{{ post.body.substring(0, 150) }}{{ post.body.length > 150 ? '...' : '' }}</small>
+        </td>
+        <td>
+          <span *ngFor="let tag of post.tags" class="badge bg-primary me-1">
+            {{ tag }}
+          </span>
+        </td>
+        <td>
+          <div class="reactions">
+            <span class="badge bg-success">👍 {{ post.reactions.likes }}</span>
+            <span class="badge bg-danger ms-1">👎 {{ post.reactions.dislikes }}</span>
+          </div>
+        </td>
+        <td>{{ post.views }}</td>
+        <td>{{ post.userId }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

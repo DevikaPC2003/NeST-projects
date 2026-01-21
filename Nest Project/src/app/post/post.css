@@ -1,0 +1,149 @@
+/* Base */
+:host {
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 70px 20px;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  color: #212529 !important;
+}
+
+/* Container */
+.table-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto;
+  padding-bottom: 30px;
+}
+
+/* Glass Table Card */
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-striped-bg: transparent;
+  --bs-table-hover-bg: transparent;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Table Header */
+.table thead {
+  background: #f1f3f5;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table th {
+  font-weight: 700;
+  font-size: 14px;
+  color: #343a40 !important;
+  padding: 14px 16px;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: none;
+}
+
+/* Table Body */
+.table tbody tr {
+  background: #ffffff;
+  border-bottom: 1px solid #f1f3f5;
+  transition: transform 0.2s ease, background 0.2s ease;
+  display: table-row;
+}
+
+.table tbody tr:hover {
+  transform: translateY(-2px);
+  background: #f8f9fa !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.table td,
+.table th,
+.table strong {
+  padding: 12px 16px;
+  vertical-align: middle;
+  color: #495057 !important;
+  font-weight: 500;
+}
+
+/* Address & Company Styling */
+.table td small {
+  color: #6c757d !important;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* Badge Styling for Tags and Reactions */
+.badge {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.badge.bg-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge.bg-success {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge.bg-danger {
+  background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Reactions Container */
+.reactions {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+/* Striped Rows */
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+  --bs-table-bg-type: transparent;
+  box-shadow: none;
+}
+
+.table.table-striped tbody tr:nth-of-type(odd) {
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Scrollbar Styling */
+.table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+
+  .table th,
+  .table td {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .table thead {
+    font-size: 13px;
+  }
+}
